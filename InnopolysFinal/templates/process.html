@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Flask application</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	</head>
+	
+	<body>
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper">
+					<p>Страница обработки формы</p>
+				</div>
+			</nav>
+		</div>
+			
+		<hr />
+		<p>Строковый параметр: "{{stringParameter}}"</p>
+		<hr />
+		<hr />
+		<p>Числовой параметр: "{{intParameter}}"</p>
+		<hr />
+		<hr />
+		<div class="row">
+			<div class="col s6">
+				<img id="imgOriginal" src="data:image/jpeg;base64,{{ imgOriginal }}" width="300" height="300">
+			</div>
+			<div class="col s6">
+				<img id="imgProcessed" src="data:image/jpeg;base64,{{ imgProcessed }}" width="300" height="300">
+			</div>
+		</div>
+		<hr />
+		
+		<a href="http://127.0.0.1:5000/">На главную</a>
+		<hr />
+				
+	</body>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</html>

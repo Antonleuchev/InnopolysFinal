@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Flask application</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	</head>
+	
+	<body>
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper">
+					<p>Страница просмотра всех результатов</p>
+				</div>
+			</nav>
+		</div>
+			
+		<div class="row">	
+			<table class="col s12">
+			<tr>
+				<th>Оригинальное изображение</th>
+				<th>Обработанное изображение</th>
+				<th>Дата</th>
+				<th>Время</th>
+			</tr>
+			
+			{% for res in data %}
+				<tr> 
+					<td><img src="data:image/jpeg;base64,{{ res.original_img_byte }}" width="300" height="300"></td> 
+					<td><img src="data:image/jpeg;base64,{{ res.processed_img_byte }}" width="300" height="300"></td> 
+					<td>{{res.date}}</td> 
+					<td>{{res.time}}</td> 
+				</tr> 
+			{% endfor %}
+			
+			</table>
+		</div>
+
+		<hr />
+		
+		<a href="http://127.0.0.1:5000/">На главную</a>
+		<hr />
+				
+	</body>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</html>

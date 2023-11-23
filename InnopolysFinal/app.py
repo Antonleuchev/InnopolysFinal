@@ -36,6 +36,7 @@ if not os.path.isdir(result_dir):
 
 device = 'cpu' # torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
+model = YOLO ('yolov8n.pt')
 model = torch.hub.load('best.pt', pretrained=True)
 model.eval()
 app.run(host="0.0.0.0", port=args.port)

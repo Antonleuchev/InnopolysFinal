@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Flask application</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	</head>
+	<body>
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper">
+					<p>Главная страница</p>
+				</div>
+			</nav>
+		</div>
+			
+		<div class="row">
+			<form class="col s12" action="/process" method="POST" enctype = "multipart/form-data">
+				<div class="row">
+					<div class="input-field col s12">
+						<input name="stringParameter" id="stringParameter" placeholder="Строковый параметр" type="text" />
+					</div>
+					<div class="input-field col s12">
+						<input name="intParameter" id="intParameter" placeholder="Числовой параметр" type="number" min="1" max="5" class="validate" />
+					</div>
+					<div class="input-field col s12">
+						<input name="imgParameter" id="imgParameter" type="file" accept=".jpg" required/>
+					</div>
+				</div>
+				<button class="btn waves-effect waves-light" type="submit">Отправить</button>
+			</form>
+		</div>
+		
+		<hr />
+		
+		<a href="http://127.0.0.1:5000/result">Все результаты</a>
+		<hr />
+	</body>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</html>

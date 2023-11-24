@@ -1,4 +1,0 @@
-Flask==2.0.1
-numpy==1.19.1
-torch==1.13.1
-opencv-python==4.2.0.34
